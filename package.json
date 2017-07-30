@@ -1,0 +1,19 @@
+{
+  "name": "gulp-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple gulp workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "workflow"
+  ],
+  "author": "Abialbon Paul",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
