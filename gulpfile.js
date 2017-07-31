@@ -1,7 +1,12 @@
-const gulp = require('gulp');
-const scss = require('gulp-sass');
-const babel = require('gulp-babel');
-const browserSync = require('browser-sync').create();
+const
+    gulp      = require('gulp'),
+    scss        = require('gulp-sass'),
+    babel       = require('gulp-babel'),
+    uglify      = require('gulp-uglify'),
+    cleanCss    = require('gulp-clean-css'),
+    useref      = require('gulp-useref'),
+    gulpIf      = require('gulp-if'),
+    browserSync = require('browser-sync').create();
 
 gulp.task('scss', () => {
    return gulp.src('app/scss/**/*.scss')
@@ -28,4 +33,12 @@ gulp.task('serve', ['browsersync', 'scss', 'es6'], () => {
    gulp.watch('app/scss/**/*.scss', ['scss']);
    gulp.watch('app/*.html', browserSync.reload);
    gulp.watch('app/js/pre-compiled/*.js', ['es6', browserSync.reload]);
+});
+
+gulp.task('production', () => {
+   gulp.src('app/*.html')
+       .pipe(useref())
+       .pipe(gulpIf('*.js', uglify()))
+       .pipe(gulpIf('*.css', cleanCss()))
+       .pipe(gulp.dest('dist'))
 });
