@@ -1,5 +1,5 @@
 const
-    gulp      = require('gulp'),
+    gulp        = require('gulp'),
     scss        = require('gulp-sass'),
     babel       = require('gulp-babel'),
     uglify      = require('gulp-uglify'),
@@ -33,6 +33,11 @@ gulp.task('imagemin', () => {
         .pipe(gulp.dest('dist/images'))
 });
 
+gulp.task('fonts', () => {
+    gulp.src('app/fonts/**/*.*')
+        .pipe(gulp.dest('dist/fonts'))
+});
+
 gulp.task('browsersync', () => {
    browserSync.init({
        server: {
@@ -47,7 +52,7 @@ gulp.task('serve', ['browsersync', 'scss', 'es6'], () => {
    gulp.watch('app/js/pre-compiled/*.js', ['es6', browserSync.reload]);
 });
 
-gulp.task('production', () => {
+gulp.task('production', ['scss', 'es6', 'fonts', 'imagemin'], () => {
    gulp.src('app/*.html')
        .pipe(useref())
        .pipe(gulpIf('*.js', uglify()))
