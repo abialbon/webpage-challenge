@@ -6,6 +6,7 @@ const
     cleanCss    = require('gulp-clean-css'),
     useref      = require('gulp-useref'),
     gulpIf      = require('gulp-if'),
+    imagemin    = require('gulp-imagemin'),
     browserSync = require('browser-sync').create();
 
 gulp.task('scss', () => {
@@ -19,6 +20,16 @@ gulp.task('es6', () => {
     return gulp.src('app/js/pre-compiled/*.js')
         .pipe(babel({ presets: ['es2015']} ))
         .pipe(gulp.dest('app/js'))
+});
+
+gulp.task('imagemin', () => {
+    gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5})
+        ]))
+        .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('browsersync', () => {
