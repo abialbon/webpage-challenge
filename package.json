@@ -19,6 +19,7 @@
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-cache": "^0.4.6",
     "gulp-clean-css": "^3.7.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.3.0",
