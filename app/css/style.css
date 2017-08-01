@@ -1,0 +1,49 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+nav.navbar {
+  height: 100px;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.37);
+  padding: 15px; }
+  nav.navbar-wrapper {
+    width: 100%;
+    margin: auto; }
+  nav.navbar .branding {
+    float: left; }
+    nav.navbar .branding-logo {
+      height: 70px;
+      width: 70px;
+      display: inline-block;
+      background-color: rgba(216, 216, 216, 0.27);
+      border-radius: 100%; }
+      nav.navbar .branding-logo img {
+        margin-top: -8px; }
+    nav.navbar .branding-brand {
+      float: right;
+      line-height: 70px;
+      margin-left: 15px;
+      font-family: "Medula One", cursive;
+      font-size: 3em; }
+  nav.navbar .navlist {
+    float: right;
+    line-height: 70px; }
+    nav.navbar .navlist ul {
+      float: left; }
+      nav.navbar .navlist ul .navlist-items {
+        float: left;
+        list-style: none;
+        margin-right: 15px;
+        font-family: "Abel", sans-serif; }
+    nav.navbar .navlist .navlist-menu {
+      float: right;
+      font-family: "Medula One", cursive;
+      font-size: 2.25em;
+      margin-left: 15px;
+      border-left: 1px solid rgba(216, 216, 216, 0.4); }
+      nav.navbar .navlist .navlist-menu #menu-icon {
+        margin-right: 10px; }
+        nav.navbar .navlist .navlist-menu #menu-icon #ham-menu {
+          fill: #FCD462; }

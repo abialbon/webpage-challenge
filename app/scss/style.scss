@@ -1,0 +1,72 @@
+//Fonts
+$medula: 'Medula One', cursive;
+$lato: 'Lato', sans-serif;
+$abel: 'Abel', sans-serif;
+
+//colors
+$yellow: #FCD462;
+
+
+$title-size: 3em;
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav.navbar {
+  height: 100px;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.37);
+  padding: 15px;
+  &-wrapper {
+    width: 100%;
+    margin: auto;
+  }
+  .branding {
+    float: left;
+    &-logo {
+      height: 70px;
+      width: 70px;
+      display: inline-block;
+      background-color: rgba(216, 216, 216, 0.27);
+      border-radius: 100%;
+      img {
+        margin-top: -8px;
+      }
+    }
+    &-brand {
+      float: right;
+      line-height: 70px;
+      margin-left: 15px;
+      font-family: $medula;
+      font-size: $title-size;
+    }
+  }
+  .navlist {
+    float: right;
+    line-height: 70px;
+    ul {
+      float: left;
+      .navlist-items {
+        float: left;
+        list-style: none;
+        margin-right: 15px;
+        font-family: $abel;
+      }
+    }
+    .navlist-menu {
+      float: right;
+      font-family: $medula;
+      font-size: 2.25em;
+      margin-left: 15px;
+      border-left: 1px solid rgba(216, 216, 216, 0.4);
+      #menu-icon {
+        margin-right: 10px;
+        #ham-menu {
+          fill: $yellow;
+        }
+      }
+    }
+  }
+}
