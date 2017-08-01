@@ -47,3 +47,77 @@ nav.navbar {
         margin-right: 10px; }
         nav.navbar .navlist .navlist-menu #menu-icon #ham-menu {
           fill: #FCD462; }
+
+.section {
+  height: 750px;
+  width: 100%; }
+  .section-title {
+    text-align: center;
+    font-family: "Medula One", cursive;
+    font-size: 3em;
+    margin-top: 75px;
+    margin-bottom: 39px; }
+    .section-title span {
+      border-bottom: 10px solid #FCD462;
+      padding-bottom: 14px; }
+  .section-text {
+    padding: 0px 40px; }
+    .section-text p {
+      font-family: "Abel", sans-serif;
+      font-size: 1.5em; }
+
+header {
+  background: url("../images/header-image.jpg") no-repeat center bottom;
+  background-size: cover; }
+
+#bean-image {
+  width: 220px;
+  margin: auto;
+  height: 300px; }
+  #bean-image img {
+    height: 220px;
+    width: 220px;
+    margin-top: 40px;
+    border-radius: 100%;
+    border: 10px solid #FCD462; }
+
+#our-coffee {
+  height: 550px; }
+
+#our-coffee .section-text {
+  display: table;
+  height: 300px; }
+  #our-coffee .section-text div {
+    display: table-cell;
+    vertical-align: middle; }
+
+#freshly-roasted {
+  background-color: #F7F7F7; }
+
+.row {
+  width: 100%;
+  float: left;
+  clear: both; }
+  .row .col {
+    float: left; }
+  .row .col-one-third {
+    width: 36%; }
+  .row .col-one-half {
+    width: 50%; }
+  .row .col-two-third {
+    width: 64%; }
+  .row .col-one-fourth {
+    width: 25%; }
+  .row .col-three-fourth {
+    width: 75%; }
+
+@media screen and (max-width: 720px) {
+  .row .col-one-third {
+    width: 100%; }
+  .row .col-two-third {
+    width: 100%; }
+  .navlist ul {
+    display: none; }
+  .section {
+    min-height: 750px;
+    height: auto; } }

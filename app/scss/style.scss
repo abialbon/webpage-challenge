@@ -70,3 +70,88 @@ nav.navbar {
     }
   }
 }
+
+.section {
+  height: 750px;
+  width: 100%;
+  &-title {
+    text-align: center;
+    font-family: $medula;
+    font-size: $title-size;
+    margin-top: 75px;
+    margin-bottom: 39px;
+    span {
+      border-bottom: 10px solid $yellow;
+      padding-bottom: 14px;
+    }
+  }
+  &-text {
+    padding: 0px 40px;
+    p {
+      font-family: $abel;
+      font-size: 1.5em;
+    }
+  }
+}
+
+header {
+  background: url("../images/header-image.jpg") no-repeat center bottom;
+  background-size: cover;
+}
+
+#bean-image {
+  width: 220px;
+  //margin-left: 30%;
+  margin: auto;
+  height: 300px;
+  img {
+    height: 220px;
+    width: 220px;
+    margin-top: 40px;
+    border-radius: 100%;
+    border: 10px solid $yellow;
+  }
+}
+#our-coffee {
+  height: 550px;
+}
+#our-coffee .section-text {
+  display: table;
+  height: 300px;
+  div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+#freshly-roasted {
+  background-color: #F7F7F7;
+}
+// Grid layout
+.row {
+  width: 100%;
+  float: left;
+  clear: both;
+  .col {
+    float: left;
+  }
+  .col-one-third { width: 36%; }
+  .col-one-half { width: 50%; }
+  .col-two-third { width: 64%; }
+  .col-one-fourth { width: 25%; }
+  .col-three-fourth { width: 75%; }
+}
+
+@media screen and (max-width: 720px) {
+  .row {
+    .col-one-third { width: 100% }
+    .col-two-third { width: 100% }
+  }
+  .navlist ul {
+    display: none;
+  }
+  .section {
+    min-height: 750px;
+    height: auto;
+  }
+}
