@@ -52,12 +52,23 @@ nav.navbar {
   height: 750px;
   width: 100%; }
   .section-title {
-    text-align: center;
     font-family: "Medula One", cursive;
     font-size: 3em;
     margin-top: 75px;
     margin-bottom: 39px; }
-    .section-title span {
+    .section-title--center {
+      text-align: center; }
+    .section-title--left {
+      text-align: left;
+      margin: 0 40px 10px; }
+    .section-title--top {
+      margin-top: 40px; }
+      .section-title--top span {
+        padding-top: 10px;
+        width: 150px;
+        border-top: 10px solid black;
+        border-bottom: none; }
+    .section-title span.yellow-border {
       border-bottom: 10px solid #FCD462;
       padding-bottom: 14px; }
   .section-text {
@@ -92,7 +103,41 @@ header {
     vertical-align: middle; }
 
 #freshly-roasted {
-  background-color: #F7F7F7; }
+  background-color: #F7F7F7;
+  min-height: 550px;
+  height: auto; }
+  #freshly-roasted .col-one-half {
+    background-color: #F7F7F7; }
+
+.roasted-img {
+  height: 550px;
+  background: url("../images/freshly_roasted.jpg") no-repeat center center;
+  background-size: cover; }
+
+.feature {
+  width: 100%;
+  display: table;
+  margin-top: 30px;
+  height: 150px; }
+  .feature-item {
+    display: table-cell;
+    width: 33%;
+    height: 150px;
+    margin-right: 20px;
+    vertical-align: middle; }
+    .feature-item-wrapper {
+      width: 80%;
+      margin: auto;
+      border: 1px solid black;
+      height: 150px; }
+      .feature-item-wrapper img {
+        width: 50px;
+        display: block;
+        margin: 20px auto 10px; }
+      .feature-item-wrapper .feature-description {
+        font-family: "Lato", sans-serif;
+        text-align: center;
+        font-size: 1.25em; }
 
 .row {
   width: 100%;
@@ -115,6 +160,8 @@ header {
   .row .col-one-third {
     width: 100%; }
   .row .col-two-third {
+    width: 100%; }
+  .row .col-one-half {
     width: 100%; }
   .navlist ul {
     display: none; }

@@ -75,12 +75,28 @@ nav.navbar {
   height: 750px;
   width: 100%;
   &-title {
-    text-align: center;
     font-family: $medula;
     font-size: $title-size;
     margin-top: 75px;
     margin-bottom: 39px;
-    span {
+    &--center {
+      text-align: center;
+    }
+    &--left {
+      text-align: left;
+      margin: 0 40px 10px;
+    }
+    &--top {
+      margin-top: 40px;
+      span {
+        padding-top: 10px;
+        width: 150px;
+        border-top: 10px solid black;
+        border-bottom: none;
+      }
+
+    }
+    span.yellow-border {
       border-bottom: 10px solid $yellow;
       padding-bottom: 14px;
     }
@@ -126,7 +142,48 @@ header {
 
 #freshly-roasted {
   background-color: #F7F7F7;
+  min-height: 550px;
+  height: auto;
+  .col-one-half {
+    background-color: #F7F7F7;
+  }
 }
+.roasted-img {
+  height: 550px;
+  background: url('../images/freshly_roasted.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.feature {
+  width: 100%;
+  display: table;
+  margin-top: 30px;
+  height: 150px;
+  &-item {
+    display: table-cell;
+    width: 33%;
+    height: 150px;
+    margin-right: 20px;
+    vertical-align: middle;
+    &-wrapper {
+      width: 80%;
+      margin: auto;
+      border: 1px solid black;
+      height: 150px;
+      img {
+        width: 50px;
+        display: block;
+        margin: 20px auto 10px;
+      }
+      .feature-description {
+        font-family: $lato;
+        text-align: center;
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
 // Grid layout
 .row {
   width: 100%;
@@ -146,6 +203,7 @@ header {
   .row {
     .col-one-third { width: 100% }
     .col-two-third { width: 100% }
+    .col-one-half { width: 100% }
   }
   .navlist ul {
     display: none;
