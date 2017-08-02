@@ -18,7 +18,8 @@ nav.navbar {
       width: 70px;
       display: inline-block;
       background-color: rgba(216, 216, 216, 0.27);
-      border-radius: 100%; }
+      border-radius: 100%;
+      transition: all 0.5s; }
       nav.navbar .branding-logo img {
         margin-top: -8px; }
     nav.navbar .branding-brand {
@@ -26,7 +27,8 @@ nav.navbar {
       line-height: 70px;
       margin-left: 15px;
       font-family: "Medula One", cursive;
-      font-size: 3em; }
+      font-size: 3em;
+      transition: all 0.5s; }
   nav.navbar .navlist {
     float: right;
     line-height: 70px; }
@@ -38,18 +40,22 @@ nav.navbar {
         margin-right: 15px;
         font-family: "Abel", sans-serif; }
     nav.navbar .navlist .navlist-menu {
+      transition: all 0.5s;
       float: right;
       font-family: "Medula One", cursive;
       font-size: 2.25em;
       margin-left: 15px;
       border-left: 1px solid rgba(216, 216, 216, 0.4); }
       nav.navbar .navlist .navlist-menu #menu-icon {
+        transition: all 0.5s;
         margin-right: 10px; }
         nav.navbar .navlist .navlist-menu #menu-icon #ham-menu {
           fill: #FCD462; }
 
 .section {
-  height: 750px;
+  display: inline-block;
+  min-height: 750px;
+  height: auto;
   width: 100%; }
   .section-title {
     font-family: "Medula One", cursive;
@@ -60,7 +66,7 @@ nav.navbar {
       text-align: center; }
     .section-title--left {
       text-align: left;
-      margin: 0 40px 10px; }
+      margin: 0 0 10px; }
     .section-title--top {
       margin-top: 40px; }
       .section-title--top span {
@@ -71,11 +77,9 @@ nav.navbar {
     .section-title span.yellow-border {
       border-bottom: 10px solid #FCD462;
       padding-bottom: 14px; }
-  .section-text {
-    padding: 0px 40px; }
-    .section-text p {
-      font-family: "Abel", sans-serif;
-      font-size: 1.5em; }
+  .section-text p {
+    font-family: "Abel", sans-serif;
+    font-size: 1.5em; }
 
 header {
   background: url("../images/header-image.jpg") no-repeat center bottom;
@@ -93,7 +97,7 @@ header {
     border: 10px solid #FCD462; }
 
 #our-coffee {
-  height: 550px; }
+  min-height: 550px; }
 
 #our-coffee .section-text {
   display: table;
@@ -104,13 +108,13 @@ header {
 
 #freshly-roasted {
   background-color: #F7F7F7;
-  min-height: 550px;
+  min-height: 600px;
   height: auto; }
-  #freshly-roasted .col-one-half {
-    background-color: #F7F7F7; }
+  #freshly-roasted .col-wrapper {
+    padding-top: 0; }
 
 .roasted-img {
-  height: 550px;
+  height: 600px;
   background: url("../images/freshly_roasted.jpg") no-repeat center center;
   background-size: cover; }
 
@@ -124,7 +128,8 @@ header {
     width: 33%;
     height: 150px;
     margin-right: 20px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    transition: all 0.2s; }
     .feature-item-wrapper {
       width: 80%;
       margin: auto;
@@ -139,12 +144,77 @@ header {
         text-align: center;
         font-size: 1.25em; }
 
+#user-stories {
+  min-height: 450px;
+  height: auto; }
+  #user-stories .user-image {
+    width: 200px;
+    margin: auto; }
+  #user-stories .user-feedback-container {
+    display: table;
+    min-height: 200px; }
+    #user-stories .user-feedback-container .user-feedback {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: "Abel", sans-serif;
+      font-size: 1.25em;
+      padding: 40px;
+      text-align: center; }
+
+#contact {
+  min-height: 500px; }
+  #contact .col-wrapper {
+    padding-top: 0; }
+  #contact .map {
+    background: url("../images/map.png") no-repeat center center;
+    background-size: cover;
+    min-height: 500px; }
+
+form {
+  display: inline-block;
+  width: 100%; }
+  form .form-group {
+    width: 100%;
+    margin-bottom: 10px; }
+    form .form-group label {
+      display: block;
+      font-family: "Abel", sans-serif;
+      font-size: 1em;
+      margin-bottom: 4px; }
+    form .form-group input[type='text'], form .form-group textarea {
+      display: inline-block;
+      border: solid 1px #dcdcdc;
+      height: 40px;
+      width: 100%;
+      font-family: "Lato", sans-serif;
+      font-size: 1em; }
+    form .form-group input[type='text']:focus, form .form-group textarea:focus {
+      outline: none;
+      border: solid 2px #FCD462;
+      padding: 8px; }
+    form .form-group textarea {
+      height: 120px; }
+  form .button {
+    height: 40px;
+    width: 200px;
+    border: solid 2px #FCD462;
+    background-color: transparent;
+    font-family: "Abel", sans-serif;
+    font-size: 1em;
+    transition: all 0.5s; }
+  form .button:hover {
+    background-color: #FCD462;
+    color: white;
+    font-size: 1.125em; }
+
 .row {
   width: 100%;
   float: left;
   clear: both; }
   .row .col {
     float: left; }
+  .row .col-wrapper {
+    padding: 40px; }
   .row .col-one-third {
     width: 36%; }
   .row .col-one-half {
@@ -156,15 +226,55 @@ header {
   .row .col-three-fourth {
     width: 75%; }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 446px) {
+  nav.navbar .branding-logo {
+    height: 50px;
+    width: 50px;
+    transform: translate(0px, 10px); }
+    nav.navbar .branding-logo img {
+      margin-top: -8px; }
+  nav.navbar .branding-brand {
+    font-size: 2.5em; }
+  nav.navbar .navlist .navlist-menu {
+    font-size: 1.75em;
+    border: none;
+    margin-left: 0; }
+    nav.navbar .navlist .navlist-menu #menu-icon {
+      transform: scale(0.7) translate(0px, 6px);
+      margin-right: 5px; }
+      nav.navbar .navlist .navlist-menu #menu-icon #ham-menu {
+        fill: #FCD462; }
+  .feature-item {
+    display: block;
+    margin: 0 0 20px 0;
+    width: 100%; } }
+
+@media screen and (max-width: 768px) {
   .row .col-one-third {
     width: 100%; }
   .row .col-two-third {
     width: 100%; }
   .row .col-one-half {
     width: 100%; }
+  .row .col-one-fourth {
+    width: 100%; }
+  .row .col-three-fourth {
+    width: 100%; }
   .navlist ul {
     display: none; }
   .section {
     min-height: 750px;
-    height: auto; } }
+    height: auto; }
+  #freshly-roasted .feature-description {
+    font-size: 1em; } }
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+  #freshly-roasted .feature-item-wrapper {
+    width: 98%; }
+  #freshly-roasted .feature-description {
+    font-size: 1em; } }
+
+@media screen and (min-width: 1224px) {
+  .row-wrapper {
+    width: 80%;
+    margin: auto; } }
